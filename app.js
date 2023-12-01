@@ -57,6 +57,10 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+app.get('/', (req, res)=>{
+  res.send("welcome to E-com");
+})
+
 // Routes
 app.use("/api", authRouter);
 app.use("/api/user", usersRouter);
